@@ -10,12 +10,12 @@ export abstract class BaseView<
   S extends IBaseViewState = IBaseViewState,
   SS = any
 > extends React.Component<P, S, SS> {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = this.init();
   }
 
-  isLoadingOnStartup() {
+  isLoadingOnInit() {
     return false;
   }
 
@@ -32,7 +32,7 @@ export abstract class BaseView<
     );
   }
 
-  abstract onRender();
+  abstract onRender(): any;
 
   getLoadingComponent(): any {
     return <></>;
@@ -44,7 +44,7 @@ export abstract class BaseView<
 
   init(): S {
     const data = {
-      loading: this.isLoadingOnStartup(),
+      loading: this.isLoadingOnInit(),
       update: (value: S) => {
         this.update(value);
       },
@@ -58,7 +58,7 @@ export abstract class BaseView<
 
   onInit(): S {
     return {
-      loading: this.isLoadingOnStartup(),
+      loading: this.isLoadingOnInit(),
       update: (value: S) => {
         this.update(value);
       },
@@ -72,7 +72,7 @@ export abstract class BaseView<
 
     this.onLoading();
 
-    this.setState((state) => {
+    this.setState(() => {
       return {
         loading: value,
       } as S;
@@ -81,12 +81,12 @@ export abstract class BaseView<
 
   public update(value?: S) {
     if (value) {
-      this.setState((state) => {
+      this.setState(() => {
         return value;
       });
     }
 
-    this.setState((state) => {
+    this.setState(() => {
       return {};
     });
   }

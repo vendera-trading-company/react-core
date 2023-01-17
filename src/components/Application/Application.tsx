@@ -6,9 +6,11 @@ interface IApplicationProps {
   children: any;
 }
 
-interface IApplicationState extends IBaseViewState {}
+export interface IApplicationState extends IBaseViewState {}
 
-export const ApplicationContext = React.createContext<IApplicationState>(null);
+export const ApplicationContext = React.createContext<IApplicationState | null>(
+  null
+);
 
 export class Application extends BaseView<
   IApplicationProps,
@@ -18,7 +20,7 @@ export class Application extends BaseView<
     return <></>;
   }
 
-  isLoadingOnStartup(): boolean {
+  isLoadingOnInit(): boolean {
     return true;
   }
 
@@ -28,21 +30,11 @@ export class Application extends BaseView<
 
   async loadApplication() {
     this.setLoading(true);
-    await loadAsync(fontsToLoad);
-    const firebaseApp = initializeApp(firebaseConfig);
-
-    const analytics = getAnalytics(firebaseApp);
-
-    logEvent(analytics, "initialize_web_application", {
-      additionalParam: __DEV__ ? "development" : "live",
-    });
-
-    this.update({
-      analytics: analytics,
-    });
-
+    await this.onLoadApplication();
     this.setLoading(false);
   }
+
+  async onLoadApplication() {}
 
   onRender() {
     if (this.state.loading) {

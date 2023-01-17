@@ -1,12 +1,17 @@
-import BaseView from "../../../../../../app/components/BaseView";
+import BaseView from "../../../components/BaseView";
 
 export class Controller<T> {
-  value: T;
+  value?: T | null;
   view: BaseView;
   callback: any;
   validation: any;
 
-  constructor(view: BaseView, value?: T, callback?: any, validation?: any) {
+  constructor(
+    view: BaseView,
+    value?: T | null,
+    callback?: any,
+    validation?: any
+  ) {
     this.view = view;
     this.value = value;
     this.callback = callback;
@@ -33,7 +38,7 @@ export class Controller<T> {
     return this;
   }
 
-  public getValue(): T {
+  public getValue(): T | null | undefined {
     return this.value;
   }
 

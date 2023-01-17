@@ -1,6 +1,6 @@
 {
   "include": ["src"],
-  "exclude": ["dist", "node_modules"],
+  "exclude": ["dist", "node_modules", "example"],
   "compilerOptions": {
     "module": "esnext",
     "lib": ["dom", "esnext"],
@@ -8,14 +8,14 @@
     "declaration": true,
     "sourceMap": true,
     "rootDir": "./src",
-    "outDir": "./dist/esm",
+    "outDir": "./dist",
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "moduleResolution": "node",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true

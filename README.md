@@ -1,1 +1,1 @@
-# react-core
+# Vendera Trading Company - React-Core

@@ -7,7 +7,7 @@ interface IViewProps {
   loadingComponent?: any;
 }
 
-class View<S> extends BaseView<IViewProps, S> {
+class View<S extends IBaseViewState> extends BaseView<IViewProps, S> {
   onInit(): S {
     return this.props.init(this);
   }
