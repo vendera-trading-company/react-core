@@ -12,10 +12,10 @@ export const ApplicationContext = React.createContext<IApplicationState | null>(
   null
 );
 
-export class Application extends BaseView<
-  IApplicationProps,
-  IApplicationState
-> {
+export class Application<
+  P extends IApplicationProps,
+  S extends IApplicationState
+> extends BaseView<P, S> {
   getLoadingComponent() {
     return <></>;
   }
