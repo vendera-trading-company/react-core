@@ -31,7 +31,7 @@ import {
 } from './components/Application/Application';
 
 /** Import Components Animated */
-import { AnimatedLine } from './components/animated/AnimatedLine/AnimatedLine';
+import { AnimatedImage } from './components/animated/AnimatedImage/AnimatedImage';
 
 /** Import Components Forms */
 import {
@@ -68,5 +68,5 @@ export {
   Collection,
   TextInput,
   ITextInputProps,
-  AnimatedLine,
+  AnimatedImage,
 };

@@ -2,7 +2,7 @@
 import { BaseView, IBaseViewState } from './components/BaseView/BaseView';
 import { Application, ApplicationContext, IApplicationState } from './components/Application/Application';
 /** Import Components Animated */
-import { AnimatedLine } from './components/animated/AnimatedLine/AnimatedLine';
+import { AnimatedImage } from './components/animated/AnimatedImage/AnimatedImage';
 /** Import Components Forms */
 import { TextInput, ITextInputProps } from './components/form/TextInput/TextInput';
 /** Import Hooks */
@@ -16,4 +16,4 @@ import { ToggleController } from './support/input-controller/ToggleController/To
 /** Import Database */
 import { Model } from './database/Model/Model';
 import { Collection } from './database/Collection/Collection';
-export { useView, useApplication, Application, ApplicationContext, IApplicationState, BaseView, IBaseViewState, Controller, TextController, ToggleController, Model, Collection, TextInput, ITextInputProps, AnimatedLine, };
+export { useView, useApplication, Application, ApplicationContext, IApplicationState, BaseView, IBaseViewState, Controller, TextController, ToggleController, Model, Collection, TextInput, ITextInputProps, AnimatedImage, };

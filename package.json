@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/vendera-trading-company/react-core.git"
   },
-  "version": "1.0.17",
+  "version": "1.0.18",
   "author": {
     "email": "faruk.ertuerk@vendera-trading.company",
     "name": "Faruk Ertürk"
@@ -31,9 +31,7 @@
     "format": "prettier --write src/**/*.{ts,tsx}",
     "lint": "eslint --fix src/**/*.{ts,tsx}",
     "prepare": "npm run build",
-    "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags",
     "test": "jest --no-watchman",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
