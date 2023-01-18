@@ -6,6 +6,12 @@ import {
   IApplicationState,
 } from "./components/Application/Application";
 
+/** Import Components Forms */
+import {
+  TextInput,
+  ITextInputProps,
+} from "./components/form/TextInput/TextInput";
+
 /** Import Hooks */
 import useApplication from "./hooks/useApplication";
 import useView from "./hooks/useView";
@@ -33,4 +39,6 @@ export {
   ToggleController,
   Model,
   Collection,
+  TextInput,
+  ITextInputProps,
 };
