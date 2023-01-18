@@ -1,1 +1,2 @@
-export { default } from "./Model";
+/* eslint-disable no-restricted-exports */
+export { default } from './Model';

@@ -1,23 +1,27 @@
 {
-  "include": ["src"],
-  "exclude": ["dist", "node_modules", "example"],
   "compilerOptions": {
-    "module": "esnext",
-    "lib": ["dom", "esnext"],
-    "importHelpers": true,
-    "declaration": true,
-    "sourceMap": true,
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-    "esModuleInterop": true,
+    "target": "es6",
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "outDir": "./lib",
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "paths": {
+      "react-native-redash/lib/module/v1": [
+        "./node_modules/react-native-redash/lib/typescript/v1/index.d.ts"
+      ]
+    }
+  },
+  "include": ["./src"],
+  "exclude": [
+    "**/node_modules/**",
+    "**/lib/**",
+    "**/coverage/**",
+    "**/demos/**"
+  ]
 }

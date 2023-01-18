@@ -1,7 +1,10 @@
-import * as React from "react";
-import { ApplicationContext } from "../components/Application/Application";
+import * as React from 'react';
+import {
+  ApplicationContext,
+  IApplicationState,
+} from '../components/Application/Application';
 
-export default () => {
+export function useApplication<S extends IApplicationState>() {
   const application = React.useContext(ApplicationContext);
 
   if (application === undefined) {
@@ -10,6 +13,12 @@ export default () => {
     );
   }
 
+  if (application) {
+    return application as S;
+  }
+
   // FIXME: Figure out a better way to do this
   return application;
-};
+}
+
+export default useApplication;

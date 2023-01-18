@@ -1,6 +1,10 @@
-import React from "react";
-import BaseView from "../BaseView";
-import { IBaseViewState } from "../BaseView/BaseView";
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+import React from 'react';
+import BaseView from '../BaseView';
+import { IBaseViewState } from '../BaseView/BaseView';
 
 interface IApplicationProps {
   children: any;

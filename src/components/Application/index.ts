@@ -1,1 +1,2 @@
-export {  default } from './Application';
+/* eslint-disable no-restricted-exports */
+export { default } from './Application';

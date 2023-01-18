@@ -1,4 +1,4 @@
-import Controller from "../Controller";
+import Controller from '../Controller';
 
 export class ToggleController extends Controller<boolean> {
   public toggle(): ToggleController {
