@@ -72,9 +72,10 @@ export const PageView = (props: IPageViewProps) => {
       pagingEnabled
       directionalLockEnabled
     >
-      {children.map((child: any) => {
+      {children.map((child: any, index: any) => {
         return (
           <View
+            key={index}
             style={[
               {
                 width: contentWidth,

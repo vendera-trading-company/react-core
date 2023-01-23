@@ -6,7 +6,7 @@ import React from 'react';
 import BaseView from '../BaseView';
 import { IBaseViewState } from '../BaseView/BaseView';
 
-interface IApplicationProps {
+export interface IApplicationProps {
   children: any;
 }
 

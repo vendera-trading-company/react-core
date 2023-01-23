@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/vendera-trading-company/react-core.git"
   },
-  "version": "1.0.20",
+  "version": "1.0.22",
   "author": {
     "email": "faruk.ertuerk@vendera-trading.company",
     "name": "Faruk Ertürk"
